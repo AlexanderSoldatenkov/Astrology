@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Roboto', sans-serif; */
+
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeue/HelveticaNeueBoldCondensed.eot');
+  src: local('Helvetica Neue Condensed Bold'), local('HelveticaNeueBoldCondensed'),
+    url('../fonts/HelveticaNeue/HelveticaNeueBoldCondensed.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeue/HelveticaNeueBoldCondensed.woff2') format('woff2'),
+    url('../fonts/HelveticaNeue/HelveticaNeueBoldCondensed.woff') format('woff'),
+    url('../fonts/HelveticaNeue/HelveticaNeueBoldCondensed.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeue/HelveticaNeueCyr-Roman.eot');
+  src: local('HelveticaNeueCyr-Roman'),
+    url('../fonts/HelveticaNeue/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeue/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+    url('../fonts/HelveticaNeue/HelveticaNeueCyr-Roman.woff') format('woff'),
+    url('../fonts/HelveticaNeue/HelveticaNeueCyr-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('../fonts/MyriadPro/MyriadPro-Bold.eot');
+  src: local('Myriad Pro Bold'), local('MyriadPro-Bold'),
+    url('../fonts/MyriadPro/MyriadPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MyriadPro/MyriadPro-Bold.woff') format('woff'),
+    url('../fonts/MyriadPro/MyriadPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('../fonts/MyriadPro/MyriadPro-Cond.eot');
+  src: local('Myriad Pro Condensed'), local('MyriadPro-Cond'),
+    url('../fonts/MyriadPro/MyriadPro-Cond.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MyriadPro/MyriadPro-Cond.woff') format('woff'),
+    url('../fonts/MyriadPro/MyriadPro-Cond.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro';
+  src: url('../fonts/MyriadPro/MyriadPro-LightCond.eot');
+  src: local('Myriad Pro Light Condensed'), local('MyriadPro-LightCond'),
+    url('../fonts/MyriadPro/MyriadPro-LightCond.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MyriadPro/MyriadPro-LightCond.woff') format('woff'),
+    url('../fonts/MyriadPro/MyriadPro-LightCond.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+// Usage
+
+
+// .container {
+//     max-width: 1200px;
+//     margin: 0 auto;
+// }
+
+// .btn {
+//     width: 220px;
+//     height: 65px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: #fff;
+//     font-size: 18px;
+//     font-weight: bold;
+//     border: 1px solid rgba(0, 0, 0, 0.2);
+//     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+//     cursor: pointer;
+//     transition: 0.3s all;
+//     outline: none;
+//     &_white {
+//         background-color: #fff;
+//     }
+//     &_dark {
+//         background-color: $dark;
+//         color: #fff;
+//         border: none;
+//     }
+//     &_min {
+//         height: 50px;
+//     }
+//     &:hover {
+//         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3); 
+//     }
+// }
+
+
+
+// .divider {
+//     width: 330px;
+//     height: 1px;
+//     margin: 0 auto;
+//     background-color: rgba(0, 0, 0, 0.5);
+// }
+
+// .title {
+//     font-size: 36px;
+//     font-weight: 400;
+// }
+
+
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.offer__slider_active {
+  display: block;
+}
