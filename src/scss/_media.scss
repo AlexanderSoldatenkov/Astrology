@@ -1,4 +1,6 @@
 @media (max-width: 1400px) {
+
+
   .head {
 
     &__menu-item {
@@ -43,6 +45,11 @@
 }
 
 @media (max-width: 992px) {
+  :root {
+    // --slider-margin-left: 0;
+    --slider-width: 50%;
+  }
+
   .head {
 
     &__menu-item-wrapper {
@@ -70,7 +77,24 @@
 
   }
 
+  // .intro {
+  //   &__slider {
+  //     width: 734px;
+  //     margin-left: -367px;
+  //   }
+  // }
+
 }
+
+// @media (max-width: 768px) {
+//   .intro {
+//     &__slider {
+//       width: 734px;
+//       margin-left: -367px;
+//     }
+//   }
+
+// }
 
 @media (max-width: 468px) {
 
