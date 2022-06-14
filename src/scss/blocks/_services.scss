@@ -1,0 +1,185 @@
+.services {
+
+  &__backgrounds {
+    min-height: 1129px;
+
+  }
+
+  &__works {
+    margin-top: 61px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__like {
+    display: block;
+    margin: 0 auto;
+    margin-top: var(--services-like-mt);
+    // margin-top: 435px;
+    font-family: HelveticaNeue;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.11;
+    letter-spacing: normal;
+    color: #adadad;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+      svg path {
+        fill: red;
+
+      }
+    }
+  }
+
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__h3 {
+    width: 242px;
+    font-family: MyriadPro;
+    font-size: 24px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #333;
+  }
+
+  &__button {
+    margin-top: 38px;
+    width: 211px;
+    height: 36px;
+    padding: 6px 22px 8px;
+    border-radius: 2px;
+    background-color: $main;
+
+
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__descr {
+    width: 610px;
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    text-align: left;
+    color: #666;
+  }
+
+  &__hr {
+    margin-top: 57px;
+    width: 100%;
+    height: 1px;
+  }
+
+  &__h2 {
+    display: block;
+    margin: 0 auto;
+    width: 242px;
+    margin-top: 88px;
+    font-family: MyriadPro;
+    font-size: 48px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #333;
+  }
+
+  &__service-wrapper {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+  }
+
+  &__service-block {
+    width: 300px;
+
+    img {
+      width: inherit;
+      height: 220px;
+      object-fit: cover;
+    }
+  }
+
+  &__service-name {
+    width: inherit;
+    margin-top: 14px;
+    font-family: MyriadPro;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.11;
+    letter-spacing: normal;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+  }
+
+  &__service-descr {
+    width: inherit;
+    margin-top: 20px;
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    text-align: left;
+    color: #666;
+  }
+
+  &__service-like {
+    width: inherit;
+    display: block;
+    margin: 0 auto;
+    margin-top: 13px;
+    font-family: HelveticaNeue;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.11;
+    letter-spacing: normal;
+    color: #adadad;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+      svg path {
+        fill: red;
+
+      }
+    }
+  }
+}

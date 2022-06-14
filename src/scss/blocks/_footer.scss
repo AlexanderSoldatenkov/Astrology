@@ -1,0 +1,45 @@
+.footer {
+
+  &__bacground {
+
+    min-height: 321px;
+    margin: 77px 0 0;
+    padding: 64px 0 0;
+    background-color: $footer-bg;
+  }
+
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {}
+
+  &__descr {
+    width: 594px;
+    margin-top: 21px;
+    opacity: 0.3;
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
+
+  &__sotial {}
+
+  &__menu-bacground {
+    min-height: 60px;
+
+
+    background-color: $footer-menu-bg;
+  }
+
+  &__menu {}
+}
