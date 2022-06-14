@@ -96,35 +96,35 @@ window.onload = () => {
   // function setposition () {
   //   track.style.transform: `translateX(${position}px)`;
   //   }
-  //Set slider in center
-  let windowWidth = slider.clientWidth;
-  const intro = document.querySelector('.intro__slider');
-  const widthInPersents = 80; //Please set Slider Width in persents
-  const sliderWidth = (windowWidth * widthInPersents) / 100;
-  const freeSpcse = (windowWidth - sliderWidth) / 2 + sliderWidth / 2;
+//   //Set slider in center
+//   let windowWidth = slider.clientWidth;
+//   const intro = document.querySelector('.intro__slider');
+//   const widthInPersents = 50; //Please set Slider Width in persents
+//   const sliderWidth = (windowWidth * widthInPersents) / 100;
+//   const freeSpcse = (windowWidth - sliderWidth) / 2 + sliderWidth / 2;
 
-  function setCssVariables() {
-    intro.style.setProperty('--slider-margin-left', ('-' + freeSpcse + 'px'));
-    intro.style.setProperty('--slider-width', (widthInPersents + '%'));
-  }
-  setCssVariables();
+//   function setCssVariables() {
+//     intro.style.setProperty('--slider-margin-left', ('-' + freeSpcse + 'px'));
+//     intro.style.setProperty('--slider-width', (widthInPersents + '%'));
+//   }
+//   setCssVariables();
  
 
-//Browser reload when window width is changed
-  let oldWidth = window.innerWidth;
-  window.onresize = function () {
-    let newWidth = window.innerWidth;
+// //Browser reload when window width is changed
+//   let oldWidth = window.innerWidth;
+//   window.onresize = function () {
+//     let newWidth = window.innerWidth;
 
-    if (newWidth != oldWidth) {
-      oldWidth = newWidth;
-      location.reload();
-    }
-  };
+//     if (newWidth != oldWidth) {
+//       oldWidth = newWidth;
+//       location.reload();
+//     }
+//   };
 
   //Paddind under slider
   let windowHeight = slider.clientHeight;
   const servicesLike = document.querySelector('.services__like');
-  let servicesLikeMt = windowHeight/1.6;
+  let servicesLikeMt = windowHeight/10;
 
   servicesLike.style.setProperty('--services-like-mt', (servicesLikeMt + 'px'));
 

@@ -49,10 +49,17 @@
     margin-top: 28px;
     width: 263px;
     height: 38px;
+    display: flex;
+    justify-content: space-between;
 
-    opacity: 0.15;
-    border: solid 1px $border-color;
-    background-color: #e5e5e5;
+    // opacity: 0.15;
+    // border: solid 1px $border-color;
+    // background-color: #e5e5e5;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &__menu-bacground {
