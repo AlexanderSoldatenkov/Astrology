@@ -1,3 +1,9 @@
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 31;
+}
+
 .head {
   &__logo-wrapper {
     display: flex;
@@ -15,7 +21,7 @@
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #fff;
+    color: $text-secod;
   }
 
   &__search {
@@ -36,12 +42,16 @@
   }
 
   &__background {
-    height: 763px;
+    height: 852px;
     // opacity: 0.6;
-    // background: lightblue url("../../img/intro/bg.jpg") no-repeat fixed center;
+    background: url("/img/intro/7416.jpg") no-repeat 100%/cover;
+    // background-size: auto 100%;
     // background-repeat: no-repeat;
     // background-size: contain 
-    background-color: rgba(3, 71, 173, 0.6);
+    // background: url("/img/intro/bg.jpg");
+    // background-color: rgba(3, 71, 173, 0.6);
+
+    // background-image: linear-gradient(rgba(5, 104, 252, 0.877), rgba(159, 197, 255, 0.6));
     ;
   }
 
@@ -103,6 +113,7 @@
     // display: inline;
     width: inherit;
     height: inherit;
+    list-style-type: none;
 
     a {
       align-items: center;

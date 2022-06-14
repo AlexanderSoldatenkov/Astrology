@@ -1,7 +1,20 @@
 .footer {
+  &__h2 {
+    align-self: center;
+    text-shadow: 0px 1px 1px rgb(0 0 0 / 10%);
+    font-family: MyriadPro;
+    font-size: 54px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
 
   &__bacground {
-
+    background: url("/img/intro/stars.jpg") no-repeat 100%/cover;
     min-height: 321px;
     margin: 77px 0 0;
     padding: 64px 0 0;
@@ -20,7 +33,7 @@
   &__descr {
     width: 594px;
     margin-top: 21px;
-    opacity: 0.3;
+    opacity: 0.8;
     font-family: HelveticaNeue;
     font-size: 14px;
     font-weight: normal;
@@ -29,10 +42,18 @@
     line-height: 1.67;
     letter-spacing: normal;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: $text-secod;
   }
 
-  &__sotial {}
+  &__sotial {
+    margin-top: 28px;
+    width: 263px;
+    height: 38px;
+
+    opacity: 0.15;
+    border: solid 1px $border-color;
+    background-color: #e5e5e5;
+  }
 
   &__menu-bacground {
     min-height: 60px;
@@ -41,5 +62,13 @@
     background-color: $footer-menu-bg;
   }
 
-  &__menu {}
+  &__menu {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+  }
+
+  &__item-wrapper {
+    align-self: center;
+  }
 }

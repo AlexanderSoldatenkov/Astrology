@@ -24,7 +24,7 @@
     font-style: normal;
     line-height: 1.11;
     letter-spacing: normal;
-    color: #adadad;
+    color: $like;
     text-align: center;
     text-transform: uppercase;
 
@@ -52,7 +52,7 @@
     line-height: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #333;
+    color: $services-h3;
   }
 
   &__button {
@@ -72,7 +72,7 @@
     line-height: 1.67;
     letter-spacing: normal;
     text-align: center;
-    color: #fff;
+    color: $text-secod;
   }
 
   &__descr {
@@ -85,7 +85,7 @@
     line-height: 1.57;
     letter-spacing: normal;
     text-align: left;
-    color: #666;
+    color: $services-descr;
   }
 
   &__hr {
@@ -107,7 +107,7 @@
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #333;
+    color: $services-h3;
   }
 
   &__service-wrapper {
@@ -141,7 +141,7 @@
     line-height: 1.11;
     letter-spacing: normal;
     text-align: center;
-    color: #333;
+    color: $services-h3;
     text-transform: uppercase;
   }
 
@@ -156,7 +156,7 @@
     line-height: 1.57;
     letter-spacing: normal;
     text-align: left;
-    color: #666;
+    color: $services-descr;
   }
 
   &__service-like {
@@ -164,6 +164,7 @@
     display: block;
     margin: 0 auto;
     margin-top: 13px;
+    margin-bottom: 15px;
     font-family: HelveticaNeue;
     font-size: 18px;
     font-weight: normal;
@@ -171,7 +172,7 @@
     font-style: normal;
     line-height: 1.11;
     letter-spacing: normal;
-    color: #adadad;
+    color: $like;
     text-align: center;
     text-transform: uppercase;
 
