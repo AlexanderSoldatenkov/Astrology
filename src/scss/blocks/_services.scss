@@ -97,7 +97,7 @@
   &__h2 {
     display: block;
     margin: 0 auto;
-    width: 242px;
+    width: auto;
     margin-top: 88px;
     font-family: MyriadPro;
     font-size: 48px;
@@ -126,6 +126,16 @@
     img {
       width: inherit;
       height: 220px;
+      object-fit: cover;
+    }
+  }
+
+  &__service-block-news {
+    width: 400px;
+
+    img {
+      width: inherit;
+      height: 266px;
       object-fit: cover;
     }
   }
