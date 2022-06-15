@@ -2,6 +2,18 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 31;
+
+
+}
+
+.nav-hide {
+  transform: translateY(-100px);
+  transition: transform .1s linear;
+}
+
+.pageup-show {
+  display: block;
+
 }
 
 .head {

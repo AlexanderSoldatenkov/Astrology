@@ -2,6 +2,29 @@ import '../scss/main.scss';
 import '../index.html';
 
 window.onload = () => {
+//Header show / hide and arrowUp
+const header = document.querySelector('nav');
+const arrowUp = document.querySelector('.pageup');
+const defaultOffset = 2500;
+let lastScroll = 0;
+
+const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+const containHide = () => header.classList.contains('nav-hide');
+
+window.addEventListener('scroll', () => {
+  if (scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset) {
+    //Scroll down
+    header.classList.add('nav-hide');
+    arrowUp.classList.add('pageup-show');
+
+  } else if (scrollPosition() < lastScroll && containHide() && scrollPosition() < defaultOffset) {
+    //Scroll up
+    header.classList.remove('nav-hide');
+    arrowUp.classList.remove('pageup-show');
+  }
+  lastScroll = scrollPosition();
+});
+
   //Hidden menu
   const hamburger = document.querySelector('.hamburger'),
     hiddenmenu = document.querySelector('.hiddenmenu'),
@@ -78,7 +101,6 @@ window.onload = () => {
 
   });
 
-
   function hideSlide() {
 
     sliderImages.forEach(item => {
@@ -92,6 +114,50 @@ window.onload = () => {
     sliderImages[i].classList.add('show', 'fade');
     sliderImages[i].classList.remove('hide');
   }
+
+  //Slow scroll main menu
+
+const menuHTML = document.getElementById('head__menu');
+const linksHTML = menuHTML.querySelectorAll('a.head__menu-link');
+
+for (let i = 0; i < linksHTML.length; i++) {
+  linksHTML[i].addEventListener('click', event => onNavLinkClick(event));
+}
+
+function onNavLinkClick(event) {
+  event.preventDefault();
+  const href = event.target.getAttribute('href');
+  const blockId = href.indexOf('#') !== -1 ? href.split('#')[1] : '';
+
+  if (!blockId) {
+    return;
+  }
+
+  document
+    .getElementById(blockId)
+    .scrollIntoView({
+      behavior: "smooth"
+    });
+}
+
+
+
+
+// Smooth scroll and page up
+// window.scroll(function () {
+//   if ($(this).scrollTop() > 800) {
+//       $('.pageup').fadeIn();
+//   } else {
+//       $('.pageup').fadeOut();
+//   }
+// });
+
+
+// document
+//     .getElementById('.pageup')
+//     .scrollIntoView({
+//       behavior: "smooth"
+//     });
 
   // function setposition () {
   //   track.style.transform: `translateX(${position}px)`;
@@ -122,10 +188,10 @@ window.onload = () => {
 //   };
 
   //Paddind under slider
-  let windowHeight = slider.clientHeight;
-  const servicesLike = document.querySelector('.services__like');
-  let servicesLikeMt = windowHeight/10;
+  // let windowHeight = slider.clientHeight;
+  // const servicesLike = document.querySelector('.services__like');
+  // let servicesLikeMt = windowHeight/10;
 
-  servicesLike.style.setProperty('--services-like-mt', (servicesLikeMt + 'px'));
+  // servicesLike.style.setProperty('--services-like-mt', (servicesLikeMt + 'px'));
 
 };

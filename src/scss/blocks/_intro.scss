@@ -1,6 +1,39 @@
 .intro {
   position: relative;
 
+  &__about-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+  }
+
+  &__about-element {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__about-h2 {
+    color: $text-secod;
+  }
+
+  &__about-descr {
+    width: auto;
+    // width: 708px;
+    margin-top: 24px;
+    opacity: 0.9;
+    font-family: HelveticaNeue;
+    font-size: 19px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: $text-secod;
+    text-align: left;
+
+  }
+
   &__wrapper {
     margin-top: 89px;
     display: flex;
@@ -24,7 +57,7 @@
   }
 
   &__descr {
-    width: auto;
+    width: 80%;
     // width: 708px;
     margin-top: 24px;
     opacity: 0.9;
@@ -35,7 +68,7 @@
     font-style: normal;
     line-height: 1.57;
     letter-spacing: normal;
-    text-align: center;
+    text-align: left;
     color: $text-secod;
   }
 
@@ -49,7 +82,7 @@
   &__descr-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 481px;
+    margin-top: 109px;
     width: inherit;
   }
 
