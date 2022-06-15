@@ -1,4 +1,19 @@
 .services {
+  &__slider-h2 {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    margin-top: 88px;
+    font-family: MyriadPro;
+    font-size: 48px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #333;
+  }
 
   &__backgrounds {
     min-height: 1129px;

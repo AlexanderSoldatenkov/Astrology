@@ -21,7 +21,14 @@ window.addEventListener('scroll', () => {
     //Scroll up
     header.classList.remove('nav-hide');
     arrowUp.classList.remove('pageup-show');
-  }
+  } else if (scrollPosition() > 3300) {
+    //Scroll up
+    arrowUp.classList.remove('pageup-show');
+  } 
+  // else if (scrollPosition() < 3300) {
+  //   //Scroll up
+  //   arrowUp.classList.add('pageup-show');
+  // }
   lastScroll = scrollPosition();
 });
 
@@ -65,7 +72,7 @@ window.addEventListener('scroll', () => {
   
 
   let i = 0;
-  let numberOfSlides = 2;
+  let numberOfSlides = 31;
   let position = 0;
   hideSlide();
   showSlider(i);
@@ -140,17 +147,6 @@ function onNavLinkClick(event) {
     });
 }
 
-
-
-
-// Smooth scroll and page up
-// window.scroll(function () {
-//   if ($(this).scrollTop() > 800) {
-//       $('.pageup').fadeIn();
-//   } else {
-//       $('.pageup').fadeOut();
-//   }
-// });
 
 
 // document
