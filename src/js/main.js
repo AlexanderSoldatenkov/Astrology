@@ -72,7 +72,7 @@ window.addEventListener('scroll', () => {
   
 
   let i = 0;
-  let numberOfSlides = 31;
+  let numberOfSlides = 23;
   let position = 0;
   hideSlide();
   showSlider(i);

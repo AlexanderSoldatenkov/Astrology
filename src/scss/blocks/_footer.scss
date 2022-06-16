@@ -17,7 +17,7 @@
     background: url("/img/intro/stars.jpg") no-repeat 100%/cover;
     min-height: 321px;
     margin: 77px 0 0;
-    padding: 64px 0 0;
+    padding: 37px 0 0;
     background-color: $footer-bg;
   }
 
@@ -43,6 +43,41 @@
     letter-spacing: normal;
     text-align: center;
     color: $text-secod;
+
+
+  }
+
+  &__descr-span {
+    width: 594px;
+    margin-top: 21px;
+
+    font-family: HelveticaNeue;
+
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: $text-secod;
+    font-size: 16px;
+    font-weight: 400;
+
+    a {
+      font-family: HelveticaNeue;
+
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.67;
+      letter-spacing: normal;
+      text-align: center;
+      color: $text-secod;
+      font-size: 16px;
+      font-weight: 400;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
   }
 
   &__sotial {
