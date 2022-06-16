@@ -85,12 +85,16 @@
 
 @media (max-width: 768px) {
 
-  // .intro {
-  //   &__slider {
-  //     width: 734px;
-  //     margin-left: -367px;
-  //   }
-  // }
+  .slider-bg__arow-left {
+    width: 32px;
+    height: 73px;
+  }
+
+  .slider-bg__arow-right {
+    width: 32px;
+    height: 73px;
+  }
+
   .services {
     &__service-wrapper {
       justify-content: center;

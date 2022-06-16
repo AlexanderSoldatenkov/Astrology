@@ -10,6 +10,7 @@ let lastScroll = 0;
 
 const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 const containHide = () => header.classList.contains('nav-hide');
+const containHideScroll = () => header.classList.contains('pageup-show');
 
 window.addEventListener('scroll', () => {
   if (scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset) {
@@ -25,10 +26,15 @@ window.addEventListener('scroll', () => {
     //Scroll up
     arrowUp.classList.remove('pageup-show');
   } 
-  // else if (scrollPosition() < 3300) {
+
+  // if (scrollPosition() < 3300 && !containHideScroll()) {
   //   //Scroll up
   //   arrowUp.classList.add('pageup-show');
-  // }
+  // } else if (scrollPosition() > 3300 && containHideScroll()) {
+  //   //Scroll up
+  //   arrowUp.classList.remove('pageup-show');
+  // } 
+
   lastScroll = scrollPosition();
 });
 
