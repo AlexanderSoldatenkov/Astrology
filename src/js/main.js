@@ -86,27 +86,27 @@ window.addEventListener('scroll', () => {
   arrowRight.addEventListener('click', () => {
     if (i === 0 || i < numberOfSlides) {
       i++;
-      console.log(i);
+      // console.log(i);
       hideSlide();
       showSlider(i);
     } else {
       i = 0;
-      console.log(i);
+      // console.log(i);
       hideSlide();
       showSlider(i);
     }
-    setposition();
+    // setposition();
   });
 
   arrowLeft.addEventListener('click', () => {
     if (i === 1 || i <= numberOfSlides && i > 0) {
       i--;
-      console.log(i);
+      // console.log(i);
       hideSlide();
       showSlider(i);
     } else {
       i = numberOfSlides;
-      console.log(i);
+      // console.log(i);
       hideSlide();
       showSlider(i);
     }
