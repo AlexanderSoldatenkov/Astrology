@@ -1,0 +1,199 @@
+.feed-form {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+
+  input {
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border: none;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4b4b4b;
+
+    &:nth-child(3) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &_mt25 {
+    margin-top: 25px;
+  }
+
+  &__checkbox-wrapper {
+    display: flex;
+
+  }
+
+
+}
+
+#feed-form__btn {
+  width: 100%;
+}
+
+#radix,
+#childHoroscope,
+#compatibilityHoroscope,
+#solar {
+  height: 17px;
+  width: 1.375em;
+  height: 1.375em;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+
+.consultation {
+  position: absolute;
+  z-index: 33;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  // background: brown center center/cover no-repeat;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  &__title {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    margin-top: 20px;
+    font-family: MyriadPro;
+    font-size: 38px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #333;
+  }
+
+  .error {
+    border: 1px solid red;
+  }
+
+  label.error {
+    color: #fff;
+    border: none;
+    margin-bottom: 15px;
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .56);
+  top: 0;
+  // z-index: 33;
+
+  &.active {
+    display: block;
+  }
+}
+
+.modal {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 679px;
+  background-color: #f2f2f2;
+  padding: 38px 40px 40px 40px;
+
+  &__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    // margin-left: 888px;
+    // margin-top: 149px;
+    font-size: 48px;
+    color: $main;
+    line-height: 21px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+
+// .overlay {
+//   display: none;
+//   position: fixed;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.56);
+
+//   top: 0;
+// }
+
+// .modal {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 380px;
+//   min-height: 400px;
+//   background-color: #f2f2f2;
+//   padding: 38px 40px 40px 40px;
+
+//   &_mini {
+//     min-height: 140px;
+//   }
+
+//   &__close {
+//     position: absolute;
+//     top: 0;
+//     right: -10%;
+//     font-size: 41px;
+//     color: $main;
+//     line-height: 21px;
+//     font-weight: bold;
+//     cursor: pointer;
+//   }
+
+//   &__subtitle {
+//     font-size: 18px;
+//     line-height: 1.2;
+//     font-weight: 700;
+//     color: #0d0d0d;
+//     text-align: center;
+//   }
+
+//   &__descr {
+//     font-size: 14px;
+//     line-height: 1.2;
+//     font-weight: 500;
+//     color: #0d0d0d;
+//     text-align: center;
+//   }
+
+//   .error {
+//     border: 1px solid red;
+//   }
+
+//   label.error {
+//     border: none;
+//     margin-bottom: 15px;
+//   }
+// }

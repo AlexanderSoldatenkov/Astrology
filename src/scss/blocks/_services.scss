@@ -27,29 +27,29 @@
     justify-content: center;
   }
 
-  &__like {
-    display: block;
-    margin: 0 auto;
-    margin-top: var(--services-like-mt);
-    // margin-top: 435px;
-    font-family: HelveticaNeue;
-    font-size: 18px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.11;
-    letter-spacing: normal;
-    color: $like;
-    text-align: center;
-    text-transform: uppercase;
+  // &__like {
+  //   display: block;
+  //   margin: 0 auto;
+  //   margin-top: var(--services-like-mt);
+  //   // margin-top: 435px;
+  //   font-family: HelveticaNeue;
+  //   font-size: 18px;
+  //   font-weight: normal;
+  //   font-stretch: normal;
+  //   font-style: normal;
+  //   line-height: 1.11;
+  //   letter-spacing: normal;
+  //   // color: $like;
+  //   text-align: center;
+  //   text-transform: uppercase;
 
-    &:hover {
-      svg path {
-        fill: red;
+  //   &:hover {
+  //     svg path {
+  //       fill: red;
 
-      }
-    }
-  }
+  //     }
+  //   }
+  // }
 
 
   &__wrapper {
@@ -197,28 +197,28 @@
     color: $services-descr;
   }
 
-  &__service-like {
-    width: inherit;
-    display: block;
-    margin: 0 auto;
-    margin-top: 13px;
-    margin-bottom: 15px;
-    font-family: HelveticaNeue;
-    font-size: 18px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.11;
-    letter-spacing: normal;
-    color: $like;
-    text-align: center;
-    text-transform: uppercase;
+  // &__service-like {
+  //   width: inherit;
+  //   display: block;
+  //   margin: 0 auto;
+  //   margin-top: 13px;
+  //   margin-bottom: 15px;
+  //   font-family: HelveticaNeue;
+  //   font-size: 18px;
+  //   font-weight: normal;
+  //   font-stretch: normal;
+  //   font-style: normal;
+  //   line-height: 1.11;
+  //   letter-spacing: normal;
+  //   color: $like;
+  //   text-align: center;
+  //   text-transform: uppercase;
 
-    &:hover {
-      svg path {
-        fill: red;
+  //   &:hover {
+  //     svg path {
+  //       fill: red;
 
-      }
-    }
-  }
+  //     }
+  //   }
+  // }
 }
