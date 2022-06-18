@@ -12,7 +12,7 @@ const forms = () => {
   const message = {
       loading: 'Загрузка...',
       success: 'Спасибо! Скоро мы с вами свяжемся',
-      failure: 'Что-то пошло не так...'
+      failure: 'Что-то пошло не так, попробуйте еще раз...'
   };
 
   const postData = async (url, data) => {

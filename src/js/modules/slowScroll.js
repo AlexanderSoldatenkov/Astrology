@@ -1,6 +1,6 @@
 const slowScroll = () => {
+  
 //Slow scroll main menu
-
 const menuHTML = document.getElementById('head__menu');
 const linksHTML = menuHTML.querySelectorAll('a.head__menu-link');
 
