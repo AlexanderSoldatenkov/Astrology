@@ -32,19 +32,23 @@ const closeClickOverlay = true;
 
 hamburger.addEventListener('click', () => {
   hiddenmenu.classList.add('active');
+  document.body.style.overflow = "hidden";
 });
 
 closeElem.addEventListener('click', () => {
   hiddenmenu.classList.remove('active');
+  document.body.style.overflow = "";
 });
 
 hiddenmenulink.addEventListener('click', () => {
   hiddenmenu.classList.remove('active');
+  document.body.style.overflow = "";
 });
 //Close menu when click on overlay
 overlay.addEventListener('click', (e) => {
   if (e.target === overlay && closeClickOverlay) {
     hiddenmenu.classList.remove('active');
+    document.body.style.overflow = "";
   }
 });
 };

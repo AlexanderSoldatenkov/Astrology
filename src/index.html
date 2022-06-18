@@ -28,7 +28,7 @@
           </div>
           <div>
             <ul class="title hiddenmenu__list">
-              <li class="hiddenmenu__link"><a href="#services">Главная</a></li>
+              <li class="hiddenmenu__link"><a href="#">Главная</a></li>
               <li class="hiddenmenu__link"><a href="#about">О нас</a></li>
               <li class="hiddenmenu__link"><a href="#why-astrology">Почему астрология</a>
               </li>
@@ -421,8 +421,9 @@
 
 
           <input name="name" required placeholder="Ваше имя" type="text">
-          <input name="phone" required placeholder="Ваш телефон">
+          <input name="phone" placeholder="Ваш телефон">
           <input name="email" required placeholder="Ваш E-mail" type="email">
+          <textarea name="textarea" placeholder="Пожелания" type="textarea" id="textarea"></textarea>
 
           <div class="feed-form__checkbox-wrapper">
             <input type="checkbox" id="radix" name="radix" value="radix">
@@ -449,38 +450,6 @@
     </div>
   </section>
 
-  <!-- <div class="overlay">
-    <div class="modal" id="consultation">
-    
-      <div class="consultation__title">Оставьте нам ваши пожелания</div>
-      <form class="feed-form" action="#">
-        <div class="modal__close">&times;</div>
-        <input name="name" placeholder="Ваше имя" type="text">
-        <input name="phone" placeholder="Ваш телефон">
-        <input name="email" placeholder="Ваш E-mail" type="email">
-
-
-        <div class="feed-form__checkbox-wrapper">
-          <input type="checkbox" id="radix" name="radix" value="radix">
-          <label for="radix">Индивидуальный гороскоп</label>
-        </div>
-        <div class="feed-form__checkbox-wrapper">
-          <input type="checkbox" id="childHoroscope" name="childHoroscope" value="childHoroscope">
-          <label for="childHoroscope">Гороскоп ребенка</label>
-        </div>
-        <div class="feed-form__checkbox-wrapper">
-          <input type="checkbox" id="compatibilityHoroscope" name="compatibilityHoroscope"
-            value="compatibilityHoroscope">
-          <label for="compatibilityHoroscope">Гороскоп совместимости</label>
-        </div>
-        <div class="feed-form__checkbox-wrapper">
-          <input type="checkbox" id="solar" name="solar" value="solar">
-          <label for="solar">Прогноз на год</label>
-        </div>
-
-        <button class="services__button">Заказать консультацию</button>
-      </form>
-    </div> -->
 
   <!-- JavaScript Bundle with Popper -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
