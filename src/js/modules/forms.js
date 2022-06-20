@@ -9,6 +9,8 @@ const forms = () => {
       });
   });
   
+
+
   const message = {
       loading: 'Загрузка...',
       success: 'Спасибо! Скоро мы с вами свяжемся',
@@ -32,8 +34,8 @@ const forms = () => {
   };
 
   form.forEach(item => {
-      item.addEventListener('submit', (e) => {
-          e.preventDefault();
+      // item.addEventListener('submit', (e) => {
+      //     e.preventDefault();
 
           let statusMessage = document.createElement('div');
           statusMessage.classList.add('status');
@@ -53,7 +55,7 @@ const forms = () => {
                       statusMessage.remove();
                   }, 7000);
               });
-      });
+      // });
   });
 };
 
