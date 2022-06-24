@@ -3,7 +3,20 @@ const eventListeners = () => {
 const buttonsOpenForm = document.querySelectorAll('.services__button');
 const closeForm = document.querySelectorAll('.modal__close');
 const forma = document.querySelector('.overlay');
+// const headSearch = document.querySelector('.head__search a');
 const scroll = calcScroll();
+
+
+// headSearch.addEventListener('click', function (e) { 
+//   e.preventDefault();
+//   const smenu = document.querySelector('.search');
+//   smenu.classList.add('hide');
+//   smenu.classList.remove('show');
+// });
+
+
+
+
 
 buttonsOpenForm.forEach(item => {
   item.addEventListener('click', (e) => {

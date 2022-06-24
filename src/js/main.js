@@ -6,14 +6,17 @@ import slider from './modules/slider';
 import slowScroll from './modules/slowScroll';
 import scrollHeader from './modules/scrollHeader';
 import checkBox from './modules/checkBox';
+import liveSearch from './modules/liveSearch';
 
 window.onload = () => {
+  liveSearch();
   eventListeners();
   checkBox();
   slider();
   // forms();
   slowScroll();
   scrollHeader();
+  
 };
 
 // window.addEventListener('DOMContentLoaded', () => {

@@ -40,14 +40,13 @@
           </div>
           <div class="hiddenmenu__sotial">
             <a class="hiddenmenu__sotial_link" href="#">
-              <img src="./img/social/whatsapp.svg" alt="whatsapp">
-
+              <span class="icon-WA hm-size"></span>
             </a>
             <a class="hiddenmenu__sotial_link" href="#">
-              <img src="./img/social/instagram.svg" alt="instagram">
+              <span class="icon-instagram hm-size"></span>
             </a>
             <a class="hiddenmenu__sotial_link" href="#">
-              <img src="./img/social/Vector.svg" alt="telegramm">
+              <span class="icon-Vector hm-size"></span>
 
             </a>
           </div>
@@ -85,7 +84,8 @@
                 <li class="head__menu-item"><a href="#Services" class="head__menu-link"> Услуги</a></li>
               </div>
               <div class="head__menu-item-wrapper">
-                <li class="head__menu-item"><a href="#News" class="head__menu-link"> Статьи / новости</a></li>
+                <li class="head__menu-item"><a href="#News" class="head__menu-link"> Статьи / новости</a>
+                </li>
               </div>
               <div class="head__menu-item-wrapper">
                 <li class="head__menu-item"><a href="#contacts" class="head__menu-link"> Контакты</a></li>
@@ -114,6 +114,29 @@
                       transform="translate(-1145 -43.969)" />
                   </svg>
                 </a></div>
+              <div class="search__div hide">
+                <form action="" name="searchItems">
+                  <input type="text" name="search" id="search" autocomplete="off">
+                  <!-- <input type="submit" class="submit" value="Поиск" name="find"> -->
+                </form>
+
+
+                <div class="search hide">
+                  <ul class="search__items">
+                    <li><a href="#indHor">Индивидуальный гороскоп</a> </li>
+                    <li><a href="#childHor">Гороскоп ребенка</a> </li>
+                    <li><a href="#comHor">Гороскоп совместимости</a> </li>
+                    <li><a href="#yearHor">Прогноз на год</a> </li>
+                    <li>Статьи / Новости</li>
+                    <li>Есть ли у вас верхний зодиак</li>
+                    <li>Как правильно встретить день рождения</li>
+
+                  </ul>
+                </div>
+              </div>
+
+
+
             </ul>
 
           </div>
@@ -123,6 +146,9 @@
 
     </div>
   </nav>
+
+
+
 
   <div class="head__background">
     <div class="container">
@@ -166,6 +192,7 @@
             </div>
           </div> -->
         </div>
+
 
 
       </div>
@@ -271,7 +298,7 @@
         <div class="services__service-wrapper">
           <div class="services__service-block">
             <img src="./img/services/individual.jpeg" alt="Индивидуальный гороскоп">
-            <div class="services__service-name">Индивидуальный гороскоп</div>
+            <div class="services__service-name" id="indHor">Индивидуальный гороскоп</div>
             <div class="services__service-descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur
               repudiandae culpa iste accusantium hic a, harum minus eos nulla corporis cupiditate, quas excepturi dicta
               veniam repellendus numquam nesciunt doloremque molestias.</div>
@@ -279,7 +306,7 @@
           </div>
           <div class="services__service-block">
             <img src="./img/services/baybi.jpg" alt="Гороскоп ребенка">
-            <div class="services__service-name">Гороскоп ребенка</div>
+            <div class="services__service-name" id="childHor">Гороскоп ребенка</div>
             <div class="services__service-descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur
               repudiandae culpa iste accusantium hic a, harum minus eos nulla corporis cupiditate, quas excepturi dicta
               veniam repellendus numquam nesciunt doloremque molestias.</div>
@@ -287,7 +314,7 @@
           </div>
           <div class="services__service-block">
             <img src="./img/services/sinastry.jpg" alt="Гороскоп совместимости">
-            <div class="services__service-name">Гороскоп совместимости</div>
+            <div class="services__service-name" id="comHor">Гороскоп совместимости</div>
             <div class="services__service-descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur
               repudiandae culpa iste accusantium hic a, harum minus eos nulla corporis cupiditate, quas excepturi dicta
               veniam repellendus numquam nesciunt doloremque molestias.</div>
@@ -295,7 +322,7 @@
           </div>
           <div class="services__service-block">
             <img src="./img/services/solar.jpg" alt="Прогноз на год">
-            <div class="services__service-name">Прогноз на год</div>
+            <div class="services__service-name" id="yearHor">Прогноз на год</div>
             <div class="services__service-descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur
               repudiandae culpa iste accusantium hic a, harum minus eos nulla corporis cupiditate, quas excepturi dicta
               veniam repellendus numquam nesciunt doloremque molestias.</div>
@@ -377,9 +404,9 @@
           <div class="footer__descr-span">Телефон: <a href="tel:888888888888">+7 (888) 99-99-000</a>&nbsp
             <a href="mailto:mailme@gmail.com">E-mail: mailme@gmail.com</a> </div>
           <div class="footer__sotial">
-            <a href="#"><img src="./img/social/instagram.svg" alt="instagram"></a>
-            <a href="#"><img src="./img/social/telegram.svg" alt="telegram"></a>
-            <a href="#"><img src="./img/social/df1f1d20ee86704251795841e6a9405a.svg" alt="whatsapp"></a>
+            <a href="#"><span class="icon-instagram size"></span></a>
+            <a href="#"><span class="icon-telegram size"></span></a>
+            <a href="#"> <span class="icon-WA size"></span></a>
           </div>
         </div>
       </div>
@@ -417,7 +444,7 @@
         <div class="modal__close">&times;</div>
         <h2 class="consultation__title">Оставьте нам ваши пожелания </h2>
 
-        <form id="consultation-form" class="feed-form" action="#">
+        <form id="consultation-form" class="feed-form" action="#" name="mainForm">
 
 
           <input name="name" required placeholder="Ваше имя" type="text" id="name">
@@ -425,8 +452,9 @@
           <input name="email" required placeholder="Ваш E-mail" type="email" id="email">
           <textarea name="textarea" placeholder="Пожелания" type="textarea" id="textarea"></textarea>
 
+
           <div class="feed-form__checkbox-wrapper">
-            <input class="test" type="checkbox" id="radix" name="radix" value="radix">
+            <input checked class="test" type="checkbox" id="radix" name="radix" value="radix">
             <label for="radix">Индивидуальный гороскоп</label>
           </div>
           <div class="feed-form__checkbox-wrapper">
@@ -444,7 +472,15 @@
           </div>
 
 
-          <button class="services__button" id="feed-form__btn">Заказать консультацию</button>
+          <!-- <select name="feed-form__select" id="">
+            <option selected value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+          </select> -->
+
+
+          <button name="button" class="services__button" id="feed-form__btn">Заказать консультацию</button>
 
         </form>
       </div>
@@ -452,10 +488,13 @@
   </section>
 
 
+
+
   <!-- JavaScript Bundle with Popper -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
   </script> -->
+
   <script src="js/main.js"></script>
 </body>
 

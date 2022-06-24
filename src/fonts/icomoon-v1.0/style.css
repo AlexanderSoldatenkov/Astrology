@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?kiphh6');
+  src: url('fonts/icomoon.eot?kiphh6#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?kiphh6') format('truetype'),
+    url('fonts/icomoon.woff?kiphh6') format('woff'),
+    url('fonts/icomoon.svg?kiphh6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-telegram:before {
+  content: "\e906";
+  color: #fff;
+}
+
+.icon-angle-up-solid:before {
+  content: "\e900";
+  color: #3055f6;
+}
+
+.icon-instagram:before {
+  content: "\e901";
+  color: #fff;
+}
+
+.icon-Search:before {
+  content: "\e902";
+  color: #fff;
+}
+
+.icon-Vector:before {
+  content: "\e903";
+  color: #e3e3e2;
+}
+
+.icon-WA:before {
+  content: "\e904";
+  color: #fff;
+}
+
+.icon-whatsapp:before {
+  content: "\e905";
+  color: #fff;
+}
+
+.size {
+  font-size: 33px;
+}
+
+.hm-size {
+  font-size: 26px;
+}

@@ -106,3 +106,45 @@ a {
     transform: scale(1);
   }
 }
+
+mark {
+  background: $mark;
+}
+
+.search {
+  &__div {
+    position: relative;
+    align-self: center;
+  }
+
+  position: absolute;
+  z-index: 35;
+  background: rgb(255, 255, 255);
+  width: 200px;
+  height: 350px;
+
+  // border: 2px solid black;
+  &__items {
+    a {
+      color: black;
+
+      &:hover {
+        // text-decoration: none;
+        color: $main;
+      }
+    }
+  }
+}
+
+
+// .searchItems {
+//   input {
+
+//     &:active,
+//     &:hover,
+//     &:focus {
+//       outline: 0;
+//       outline-offset: 0;
+//     }
+//   }
+// }
