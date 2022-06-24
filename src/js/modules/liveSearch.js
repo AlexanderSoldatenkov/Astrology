@@ -3,19 +3,14 @@ const liveSearch = () => {
   // let searchITEM = searchForm.find;
   let searchInput = searchForm.search;
   const searchField = document.querySelector('.search__div');
-
   const headSearch = document.querySelector('.head__search');
   const smenu = document.querySelector('.search');
 
-  function hide(selector) {
-    selector.classList.add('hide');
-    selector.classList.remove('show');
-  }
-
-  function show(selector) {
-    selector.classList.add('show');
-    selector.classList.remove('hide');
-  }
+  searchForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let val = searchInput.value.trim();
+    alert(val);
+  });
 
   headSearch.addEventListener('click', function (e) {
     e.preventDefault();
@@ -37,10 +32,6 @@ const liveSearch = () => {
     show(headSearch);
   });
 
-  searchInput.addEventListener('submit', function (e) {
-    e.preventDefault();
-    console.log('ddddddddddd');
-  });
 
   searchInput.addEventListener('input', function (e) {
     e.preventDefault();
@@ -52,6 +43,7 @@ const liveSearch = () => {
       searchItems.forEach(function (elem) {
         let elemInLowerCase = elem.innerText.toLowerCase();
         let position = elemInLowerCase.search(valInLowerCase);
+       
         if (position == -1) {
           elem.classList.add('hide');
           elem.innerHTML = elem.innerText;
@@ -74,6 +66,16 @@ const liveSearch = () => {
     //pos - позиция, где мы нашли совпадение
     //string - cтрока, которую мы передаем
     return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
+  }
+
+  function hide(selector) {
+    selector.classList.add('hide');
+    selector.classList.remove('show');
+  }
+
+  function show(selector) {
+    selector.classList.add('show');
+    selector.classList.remove('hide');
   }
 
 
