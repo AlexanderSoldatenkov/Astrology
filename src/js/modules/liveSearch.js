@@ -6,6 +6,36 @@ const liveSearch = () => {
   const headSearch = document.querySelector('.head__search');
   const smenu = document.querySelector('.search');
 
+
+//Append li in search
+  const body = document.querySelector('body');
+  let textNodes = [];
+  function recurcy(element) {
+    element.childNodes.forEach(node => {
+  
+      if (node.nodeName.match(/^H\d/)) {
+        // textContent.trim()
+        textNodes.push(node.textContent.trim());
+
+      } else {
+        
+        recurcy(node);
+      }
+    });
+  }
+  recurcy(body);
+
+  // let listItems = [];
+  textNodes.forEach(function(item) {
+    let node = document.createElement("li");
+    node.innerHTML = `<li>${item}</li>`;
+    smenu.append(node);
+  });
+  // console.log(listItems);
+
+
+
+
   searchForm.addEventListener('submit', function (e) {
     e.preventDefault();
     let val = searchInput.value.trim();

@@ -7,8 +7,10 @@ import slowScroll from './modules/slowScroll';
 import scrollHeader from './modules/scrollHeader';
 import checkBox from './modules/checkBox';
 import liveSearch from './modules/liveSearch';
+import parser from './modules/parser';
 
 window.onload = () => {
+  // parser();
   liveSearch();
   eventListeners();
   checkBox();
@@ -16,6 +18,7 @@ window.onload = () => {
   // forms();
   slowScroll();
   scrollHeader();
+  
   
 };
 

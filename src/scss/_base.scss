@@ -120,8 +120,9 @@ mark {
   position: absolute;
   z-index: 35;
   background: rgb(255, 255, 255);
-  width: 200px;
+  width: 186px;
   height: 350px;
+  overflow: scroll;
 
   // border: 2px solid black;
   &__items {
