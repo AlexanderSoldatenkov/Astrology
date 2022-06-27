@@ -10,13 +10,14 @@ const liveSearch = () => {
 //Append li in search
   const body = document.querySelector('body');
   let textNodes = [];
+  let ids = [];
   function recurcy(element) {
     element.childNodes.forEach(node => {
   
       if (node.nodeName.match(/^H\d/)) {
-        // textContent.trim()
         textNodes.push(node.textContent.trim());
-
+        ids.push(node.id);
+        
       } else {
         
         recurcy(node);
@@ -24,23 +25,28 @@ const liveSearch = () => {
     });
   }
   recurcy(body);
-
-  // let listItems = [];
-  textNodes.forEach(function(item) {
+ 
+  textNodes.forEach(function(item, i) {
     let node = document.createElement("li");
-    node.innerHTML = `<li>${item}</li>`;
-    smenu.append(node);
+      
+      node.innerHTML = `<a href='#${ids[i]}'>${item}<a>`;
+      // node.style.cssText = `
+      // a {
+      //   color: black;
+      // }
+      // `;
+      smenu.append(node);
   });
-  // console.log(listItems);
+ 
 
 
 
 
-  searchForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    let val = searchInput.value.trim();
-    alert(val);
-  });
+  // searchForm.addEventListener('submit', function (e) {
+  //   e.preventDefault();
+  //   let val = searchInput.value.trim();
+  //   alert(val);
+  // });
 
   headSearch.addEventListener('click', function (e) {
     e.preventDefault();
@@ -62,7 +68,7 @@ const liveSearch = () => {
     show(headSearch);
   });
 
-
+let crossElem;
   searchInput.addEventListener('input', function (e) {
     e.preventDefault();
     let val = this.value.trim();
@@ -75,19 +81,39 @@ const liveSearch = () => {
         let position = elemInLowerCase.search(valInLowerCase);
        
         if (position == -1) {
-          elem.classList.add('hide');
-          elem.innerHTML = elem.innerText;
+          // elem.classList.add('hide');
+          hide(elem);
+          // elem.innerHTML = elem.innerText;
         } else {
-          elem.classList.remove('hide');
-          let str = elem.innerText;
-          elem.innerHTML = insertMark(str, position, val.length);
+          // elem.classList.remove('hide');
+          show(elem);
+          crossElem = elem;
+          // let str = elem.innerText;
+          // elem.innerHTML = insertMark(str, position, val.length);
         }
+       
       });
     } else {
       searchItems.forEach(function (elem) {
-        elem.classList.remove('hide');
-        elem.innerHTML = elem.innerText;
+        // elem.classList.remove('hide');
+        show(elem);
+        // elem.innerHTML = elem.innerText;
       });
+    }
+   
+    
+
+  });
+
+  searchForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    // let val = searchInput.innerHTML;
+    // alert(val);
+    if(crossElem.classList.contains('show')) {
+      const url = crossElem.querySelector('.search li > a ').href;
+      document.location.href = url;
+      // console.log (rrr);
+     
     }
   });
 
