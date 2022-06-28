@@ -2,10 +2,20 @@ const liveSearch = () => {
   let searchForm = document.forms.searchItems;
   // let searchITEM = searchForm.find;
   let searchInput = searchForm.search;
+  let crossElem;
   const searchField = document.querySelector('.search__div');
   const headSearch = document.querySelector('.head__search');
   const smenu = document.querySelector('.search');
-
+  searchInput.style.cssText = `  
+  font-family: HelveticaNeue;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  padding: 0 5px 0 5px;   
+  font-size: 16px;
+  font-weight: 400;
+  `;
 
 //Append li in search
   const body = document.querySelector('body');
@@ -30,30 +40,32 @@ const liveSearch = () => {
     let node = document.createElement("li");
       
       node.innerHTML = `<a href='#${ids[i]}'>${item}<a>`;
-      // node.style.cssText = `
-      // a {
-      //   color: black;
-      // }
-      // `;
+   
+      node.style.cssText = `  
+      font-family: HelveticaNeue;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.27;
+      letter-spacing: normal;
+      padding: 0 5px 0 5px;  
+      font-size: 16px;
+      font-weight: 300;
+      color: black;
+      `;
+      let aLink = node.querySelector('a');
+      aLink.style.cssText = `  
+        color: black;
+      `;
+
       smenu.append(node);
   });
  
-
-
-
-
-  // searchForm.addEventListener('submit', function (e) {
-  //   e.preventDefault();
-  //   let val = searchInput.value.trim();
-  //   alert(val);
-  // });
-
+//Events
   headSearch.addEventListener('click', function (e) {
     e.preventDefault();
     hide(headSearch);
     show(searchField);
   });
-
 
   searchInput.addEventListener('focus', function (e) {
     e.preventDefault();
@@ -68,7 +80,7 @@ const liveSearch = () => {
     show(headSearch);
   });
 
-let crossElem;
+
   searchInput.addEventListener('input', function (e) {
     e.preventDefault();
     let val = this.value.trim();
@@ -107,22 +119,19 @@ let crossElem;
 
   searchForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    // let val = searchInput.innerHTML;
-    // alert(val);
     if(crossElem.classList.contains('show')) {
       const url = crossElem.querySelector('.search li > a ').href;
       document.location.href = url;
-      // console.log (rrr);
-     
     }
   });
 
-  function insertMark(string, pos, len) {
-    //len - количество символов, которые ввел пользователь
-    //pos - позиция, где мы нашли совпадение
-    //string - cтрока, которую мы передаем
-    return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
-  }
+//Functions
+  // function insertMark(string, pos, len) {
+  //   //len - количество символов, которые ввел пользователь
+  //   //pos - позиция, где мы нашли совпадение
+  //   //string - cтрока, которую мы передаем
+  //   return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
+  // }
 
   function hide(selector) {
     selector.classList.add('hide');
