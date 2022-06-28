@@ -3,6 +3,7 @@ const liveSearch = () => {
   let searchInput = searchForm.search;
   let crossElem;
   let appendWarning = true;
+  let oneTime = true;
   const searchField = document.querySelector('.search__div');
   const headSearch = document.querySelector('.head__search');
   const smenu = document.querySelector('.search');
@@ -114,6 +115,19 @@ const liveSearch = () => {
 
         if (position == -1) {
           hide(elem);
+          
+          // if (oneTime) {
+          //   // console.log('По вашему запросу ничего не найдено');
+          //     smenu.append(warning);
+          //     show(warn);
+          //     oneTime = false;
+            
+          // } else if (elem.classList.contains('hide')) {
+          //   show(warn);
+          // } else {
+          //   hide(warn);
+          // }
+         
           // elem.innerHTML = elem.innerText;
         } else {
           show(elem);
