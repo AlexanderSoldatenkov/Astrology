@@ -1,11 +1,12 @@
 const liveSearch = () => {
   let searchForm = document.forms.searchItems;
-  // let searchITEM = searchForm.find;
   let searchInput = searchForm.search;
   let crossElem;
+  let appendWarning = true;
   const searchField = document.querySelector('.search__div');
   const headSearch = document.querySelector('.head__search');
   const smenu = document.querySelector('.search');
+
   searchInput.style.cssText = `  
   font-family: HelveticaNeue;
   font-stretch: normal;
@@ -17,31 +18,33 @@ const liveSearch = () => {
   font-weight: 400;
   `;
 
-//Append li in search
+
+  //Append li in search
   const body = document.querySelector('body');
   let textNodes = [];
   let ids = [];
+
   function recurcy(element) {
     element.childNodes.forEach(node => {
-  
+
       if (node.nodeName.match(/^H\d/)) {
         textNodes.push(node.textContent.trim());
         ids.push(node.id);
-        
+
       } else {
-        
+
         recurcy(node);
       }
     });
   }
   recurcy(body);
- 
-  textNodes.forEach(function(item, i) {
+
+  textNodes.forEach(function (item, i) {
     let node = document.createElement("li");
-      
-      node.innerHTML = `<a href='#${ids[i]}'>${item}<a>`;
-   
-      node.style.cssText = `  
+
+    node.innerHTML = `<a href='#${ids[i]}'>${item}<a>`;
+
+    node.style.cssText = `  
       font-family: HelveticaNeue;
       font-stretch: normal;
       font-style: normal;
@@ -52,15 +55,15 @@ const liveSearch = () => {
       font-weight: 300;
       color: black;
       `;
-      let aLink = node.querySelector('a');
-      aLink.style.cssText = `  
+    let aLink = node.querySelector('a');
+    aLink.style.cssText = `  
         color: black;
       `;
 
-      smenu.append(node);
+    smenu.append(node);
   });
- 
-//Events
+
+  //Events
   headSearch.addEventListener('click', function (e) {
     e.preventDefault();
     hide(headSearch);
@@ -85,25 +88,40 @@ const liveSearch = () => {
     e.preventDefault();
     let val = this.value.trim();
     let valInLowerCase = val.toLowerCase();
-    
     let searchItems = document.querySelectorAll('.search li');
+
+    const warning = document.createElement("li");
+    let warn = document.querySelector('.warn');
+    warning.innerHTML = "По вашему запросу ничего не найдено";
+    warning.style.cssText = `  
+      font-family: HelveticaNeue;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.27;
+      letter-spacing: normal;
+      padding: 0 5px 0 5px;  
+      font-size: 16px;
+      font-weight: 300;
+      color: black;
+      `;
+    warning.classList.add('show');
+    warning.classList.add('warn');
+
     if (val != '') {
       searchItems.forEach(function (elem) {
         let elemInLowerCase = elem.innerText.toLowerCase();
         let position = elemInLowerCase.search(valInLowerCase);
-       
+
         if (position == -1) {
-          // elem.classList.add('hide');
           hide(elem);
           // elem.innerHTML = elem.innerText;
         } else {
-          // elem.classList.remove('hide');
           show(elem);
           crossElem = elem;
           // let str = elem.innerText;
           // elem.innerHTML = insertMark(str, position, val.length);
         }
-       
+
       });
     } else {
       searchItems.forEach(function (elem) {
@@ -112,20 +130,33 @@ const liveSearch = () => {
         // elem.innerHTML = elem.innerText;
       });
     }
-   
-    
+
+    if (crossElem.classList.contains('hide')) {
+      // console.log('По вашему запросу ничего не найдено');
+      if (appendWarning) {
+        smenu.append(warning);
+        appendWarning = false;
+      }
+      show(warn);
+    } else {
+      hide(warn);
+    }
+
 
   });
 
   searchForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    if(crossElem.classList.contains('show')) {
+    if (crossElem.classList.contains('show')) {
       const url = crossElem.querySelector('.search li > a ').href;
       document.location.href = url;
     }
+    // else if (crossElem.classList.contains('hide')) {
+    //   alert('По вашему запросу ничего не найдено');
+    // }
   });
 
-//Functions
+  //Functions
   // function insertMark(string, pos, len) {
   //   //len - количество символов, которые ввел пользователь
   //   //pos - позиция, где мы нашли совпадение

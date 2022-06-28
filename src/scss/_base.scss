@@ -68,7 +68,6 @@ a {
 }
 
 
-
 .show {
   display: block;
 }
@@ -126,6 +125,8 @@ mark {
 
   // border: 2px solid black;
   &__items {
+    list-style-type: square;
+
     a {
       color: black;
 
