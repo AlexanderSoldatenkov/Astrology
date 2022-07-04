@@ -77,8 +77,8 @@ const checkBox = () => {
  
     }
     if (selected === true) {
-      
       forms();
+      selected = false;
     }
 
     // checkbox.forEach(item => {

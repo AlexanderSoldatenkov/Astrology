@@ -72,7 +72,9 @@
 }
 
 @media (max-width: 992px) {
-
+  .accordion__element {
+    width: auto;
+  }
 
   .head {
 
@@ -243,10 +245,25 @@
   }
 }
 
+@media (max-width: 490px) {
+  .accordion {
+    &__heading {
+      font-size: 22px;
+      height: 66px;
+      padding: 6px 15px 0 15px;
+      margin: 5px 0 5px 0;
+    }
+  }
+}
+
+
 @media (max-width: 468px) {
+
+
   .services__service-block-news {
     width: 370px;
   }
+
 
 
 

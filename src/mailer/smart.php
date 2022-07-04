@@ -20,12 +20,12 @@ $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'xspikyx@mail.ru';                 // Наш логин
-$mail->Password = 'oneutjnkckjabnug';                           // Наш пароль от ящика
-$mail->SMTPSecure = '';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Password = 'Tnh5LcH8Xu8AxFJRBfnP';                           // Наш пароль от ящика
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 
 $mail->setFrom('xspikyx@mail.ru', 'AlexanderSoldatenkov');   // От кого письмо 
-$mail->addAddress('xspikyx@gmail.com');     // Add a recipient
+$mail->addAddress('xspikyx@mail.ru');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -34,14 +34,14 @@ $mail->addAddress('xspikyx@gmail.com');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Данные';
+$mail->Subject = 'Астросфера заказ';
 $mail->Body    = '
 		Пользователь оставил данные <br> 
 	Имя: ' . $name . '<br>
   Телефон: ' . $phone . '<br>
 	E-mail: ' . $email . '<br>
 	Содержание письма: ' . $textarea . '<br>
-  Наименование услуги: ' . $radix . $childHoroscope . $compatibilityHoroscope . $solar . '<br>
+  Наименование услуги: ' . $radix . ' ' . $childHoroscope . ' ' . $compatibilityHoroscope . ' ' . $solar . '<br>
   ';
 
 if (!$mail->send()) {

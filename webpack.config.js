@@ -58,6 +58,13 @@ const plugins = () => {
         collapseWhitespace: isProd
       }
     }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, 'src/policy.html'),
+      filename: 'policy.html',
+      minify: {
+        collapseWhitespace: isProd
+      }
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `./css/${filename('css')}`
@@ -103,7 +110,7 @@ const plugins = () => {
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
-  entry: './js/main.js',
+  entry: './js/main.js', // entry: ['./src/file_1.js', './src/file_2.js'],
   output: {
     filename: `./js/${filename('js')}`,
     path: path.resolve(__dirname, 'dist'),

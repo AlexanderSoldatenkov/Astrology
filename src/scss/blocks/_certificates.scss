@@ -1,0 +1,46 @@
+.certificates {
+
+  &__h2 {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    margin-top: 61px;
+    width: auto;
+    font-family: MyriadPro;
+    font-size: 48px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #333;
+  }
+
+  &__wrapper {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__imgBig {}
+
+  &__imgSmall {
+    width: 400px;
+    height: 266px;
+    object-fit: cover;
+  }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
