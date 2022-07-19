@@ -11,12 +11,15 @@ import liveSearch from './modules/liveSearch';
 import parser from './modules/parser';
 import accordion from './modules/accordion';
 import zoomImages from './modules/zoomImages';
-import closeClickOverlay from './modules/closeClickOverlay';
+import servicesPopup from './modules/servicesPopup';
+import newsPopup from './modules/newsPopup';
 
 window.onload = () => {
-  // closeClickOverlay('.hiddenmenu', '.hiddenmenu__overlay', '.services__button', '.modal__close');
+  newsPopup();
+  servicesPopup();
   zoomImages();
   accordion('.accordion__heading');
+  scrollHeader();
   // parser();
   liveSearch();
   eventListeners();
@@ -24,7 +27,7 @@ window.onload = () => {
   slider();
   // forms();
   slowScroll();
-  scrollHeader();
+  
   
   
 };

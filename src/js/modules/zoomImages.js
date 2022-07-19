@@ -11,6 +11,15 @@ const zoomImages = () => {
   imgPopup.style.justifyContent = 'center';
   imgPopup.style.alignItems = 'center';
   imgPopup.style.display = 'none';
+  imgPopup.innerHTML = `<div class="certificates__close">&times;</div>`;
+
+  const close = imgPopup.querySelector('.certificates__close');
+  close.addEventListener('click', (e) => {
+    e.preventDefault();
+    imgPopup.style.display = 'none';
+      document.body.style.overflow = "";
+      document.body.style.marginRight = `0px`;
+  });
 
   imgPopup.appendChild(imgBig);
 
@@ -26,15 +35,7 @@ const zoomImages = () => {
       document.body.style.marginRight = `${scroll}px`;
 
       imgBig.innerHTML = target.nextElementSibling.innerHTML;
-
-      const close = imgBig.querySelector('.certificates__close');
-      close.addEventListener('click', (e) => {
-        e.preventDefault();
-        imgPopup.style.display = 'none';
-          document.body.style.overflow = "";
-          document.body.style.marginRight = `0px`;
-      });
-      // console.log(testEl);
+      // console.log(imgBig.innerHTML);
     }
 
     if (target && target.matches('div.popup')) {
@@ -43,6 +44,8 @@ const zoomImages = () => {
       document.body.style.marginRight = `0px`;
     }
   });
+
+  
 
   function calcScroll() {
     let div = document.createElement('div');
@@ -59,6 +62,23 @@ const zoomImages = () => {
     return scrollWidth;
   }
 
+
+  // const templ = document.querySelector('#templ');
+  // const pict = templ.content.querySelector('picture');
+  // pict.innerHTML = `
+  // <source media="(min-width:671px)" srcset="./img/Certificates/Certificate_550.png">
+  //                 <source media="(min-width:465px)" srcset="./img/Certificates/Certificate_450.png">
+  //                 <source media="(min-width:400px)" srcset="./img/Certificates/Certificate_400.png">
+  //                 <img src="./img/Certificates/Certificate_300.png" alt="Certificate" style="width:auto;">
+  // `;
+  // //Дубликат узла
+  // imgPopup.append(templ.content.cloneNode(true));
+  // pict.innerHTML = `
+  // <source media="(min-width:671px)" srcset="./img/Certificates/Certificate_550.png">
+  //                 <source media="(min-width:465px)" srcset="./img/Certificates/Certificate_550.png">
+  //                 <source media="(min-width:400px)" srcset="./img/Certificates/Certificate_550.png">
+  //                 <img src="./img/Certificates/Certificate_300.png" alt="Certificate" style="width:auto;">
+  // `;
 };
 
 export default zoomImages;

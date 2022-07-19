@@ -19,9 +19,6 @@ window.addEventListener('scroll', () => {
     //Scroll up
     header.classList.remove('nav-hide');
     arrowUp.classList.remove('pageup-show');
-  } else if (scrollPosition() > 3300) {
-    //Scroll up
-    arrowUp.classList.remove('pageup-show');
   } 
 
   // if (scrollPosition() < 3300 && !containHideScroll()) {
