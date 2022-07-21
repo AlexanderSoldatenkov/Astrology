@@ -133,6 +133,28 @@ module.exports = {
         test: /\.html$/,
         loader: 'html-loader',
       },
+
+      {
+        test: /\.html$/i,
+        include: path.join(__dirname, 'src/views'),
+        use: {
+          loader: 'html-loader',
+          options: {
+            esModule: false,
+            sources: {
+              list: [
+                '...',
+                {
+                  tag: 'a',
+                  attribute: 'href',
+                  type: 'src'
+                }
+              ]
+            }
+          }
+        }
+      },
+
       {
         test: /\.css$/i,
         use: [

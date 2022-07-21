@@ -3,7 +3,7 @@ const liveSearch = () => {
   let searchInput = searchForm.search;
   let crossElem;
   let appendWarning = true;
-  let oneTime = true;
+  // let oneTime = true;
   const searchField = document.querySelector('.search__div');
   const headSearch = document.querySelector('.head__search');
   const smenu = document.querySelector('.search');

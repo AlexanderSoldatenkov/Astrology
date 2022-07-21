@@ -13,8 +13,10 @@ import accordion from './modules/accordion';
 import zoomImages from './modules/zoomImages';
 import servicesPopup from './modules/servicesPopup';
 import newsPopup from './modules/newsPopup';
+import sliderPopup from './modules/sliderPopup';
 
 window.onload = () => {
+  sliderPopup();
   newsPopup();
   servicesPopup();
   zoomImages();
