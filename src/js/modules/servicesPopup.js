@@ -16,7 +16,12 @@ const servicesPopup = () => {
   imgPopup.style.display = 'none';
   // imgPopup.innerHTML = `<div class="services__close">&times;</div>`;
 
- 
+    //Esc key press
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    imgPopup.style.display = 'none';
+  }
+});
 
  
 

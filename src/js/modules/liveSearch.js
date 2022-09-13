@@ -22,23 +22,26 @@ const liveSearch = () => {
 
   //Append li in search
   const body = document.querySelector('body');
-  let textNodes = [];
-  let ids = [];
 
-  function recurcy(element) {
-    element.childNodes.forEach(node => {
-
+  function getNodesAndIds(elementHTML) {
+    let textNodes = [];
+    let ids = [];
+    
+    elementHTML.childNodes.forEach(node => {
       if (node.nodeName.match(/^H\d/)) {
         textNodes.push(node.textContent.trim());
         ids.push(node.id);
-
       } else {
-
-        recurcy(node);
+        const obj = getNodesAndIds(node);
+        textNodes = textNodes.concat(obj.textNodes);
+        ids = ids.concat(obj.ids);
       }
     });
+
+    return {textNodes, ids};
   }
-  recurcy(body);
+  const {textNodes, ids} = getNodesAndIds(body);
+
 
   textNodes.forEach(function (item, i) {
     let node = document.createElement("li");

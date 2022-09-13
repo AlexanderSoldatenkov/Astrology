@@ -33,7 +33,15 @@ closeForm.forEach(item => {
     document.body.style.marginRight = `0px`;
   });
 });
-
+//Esc key press
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    forma.classList.remove('active');  
+    hiddenmenu.classList.remove('active');
+    document.body.style.overflow = "";
+    document.body.style.marginRight = `0px`;
+  }
+});
 
 
 //Hidden menu

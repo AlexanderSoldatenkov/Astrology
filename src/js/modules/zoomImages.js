@@ -21,6 +21,13 @@ const zoomImages = () => {
       document.body.style.marginRight = `0px`;
   });
 
+  //Esc key press
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    imgPopup.style.display = 'none';
+  }
+});
+
   imgPopup.appendChild(imgBig);
 
   workSection.addEventListener('click', (e) => {

@@ -360,3 +360,18 @@
 .test {
   z-index: 50;
 }
+
+.slider {
+  &__close {
+    position: absolute;
+    font-size: 48px;
+    color: $slider-arrow;
+    line-height: 21px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 15;
+    top: 5px;
+    right: 5px;
+    color: $main;
+  }
+}
